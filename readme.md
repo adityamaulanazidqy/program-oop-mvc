@@ -195,15 +195,15 @@ class m_programKerja
 
     public function setProgramKerja($nomorProgram, $namaProgram, $suratKeterangan)
     {
-        global $mysqli; // Access the global $mysqli variable
+        global $mysqli; 
 
         $rs = $mysqli->query("INSERT INTO proker VALUES ('$nomorProgram', '$namaProgram', '$suratKeterangan')");
-        return $rs; // Return the result of the query
+        return $rs; 
     }
 
     public function getSemuaProgramKerja()
     {
-        global $mysqli; // Access the global $mysqli variable
+        global $mysqli; 
         $rs = $mysqli->query("SELECT * FROM proker");
         $rows = array();
 
